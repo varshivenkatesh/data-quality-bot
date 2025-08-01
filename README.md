@@ -4,7 +4,7 @@
 
 ## Usage
 
-- Run with `python -m' if there are path issues!
+- Run with `python -m` if there are path issues!
 
 - Current version supports `.csv`, `.xlsx`, `.xls`, `.json` file formats
 - CLI usage with `--file` or `--folder` to run analytics for data
