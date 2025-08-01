@@ -1,0 +1,71 @@
+# Basic dataset statistics
+basic_stats:
+  enabled: true
+  include: [num_rows, num_columns, column_types]
+
+# Null value analysis
+null_analysis:
+  enabled: true
+  include_counts: true
+  include_percentages: true
+
+# Duplicate row analysis
+duplicate_analysis:
+  enabled: true
+  include_count: true
+  include_percentage: true
+
+# Unique value counts
+unique_values:
+  enabled: true
+
+# Constant value detection
+constant_values:
+  enabled: true
+
+# High cardinality detection
+high_cardinality:
+  enabled: true
+  threshold: 0.5  # Fraction of total rows
+
+# Primary key detection
+primary_key_detection:
+  enabled: true
+
+# Mixed data types detection
+mixed_types:
+  enabled: true
+
+# Whitespace issues detection
+whitespace_issues:
+  enabled: true
+
+# Outlier detection
+outlier_detection:
+  enabled: true
+  method: iqr  # or zscore
+  iqr_multiplier: 1.5
+  zscore_threshold: 3
+
+# Value distribution analysis
+value_distribution:
+  enabled: true
+  top_n: 5
+
+# Date/datetime analysis
+date_analysis:
+  enabled: true
+  check_future_dates: true
+
+# Legacy custom checks
+custom_checks:
+  numeric_ranges:
+    - column: quantity
+      min: 1
+      max: 1000
+  date_validation:
+    - column: order_date
+      allow_future_dates: false
+  value_sets:
+    - column: status
+      allowed_values: [pending, shipped, delivered]
